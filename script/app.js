@@ -11,6 +11,8 @@ var app = (function() {
 
   // initialize the actual app
   function init() {
+    welcomeLog();
+
     elContainer = document.getElementById('container');
     elLevel = document.getElementById('level');
 
@@ -159,6 +161,21 @@ var app = (function() {
       }
     }
   };
+
+  // some welcoming log messages for developers
+  function welcomeLog() {
+    if (!window.console) {
+      return;
+    }
+
+    console.log('Hello, and welcome to %cS%ci%cm%co%cn%c!', c('green'), c('red'), c('blue'), c('gold'), c('purple'), 'color: #000;');
+    console.log('You can check out the code on GitHub: http://github.com/evyatron/simon');
+    console.log('Have fun!');
+
+    function c(color) {
+      return 'font-weight: bold; color: ' + color + ';';
+    }
+  }
 
   // expose some functions, so we can have fun debugging
   return {
