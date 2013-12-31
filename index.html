@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Simon</title>
+
+    <meta name="viewport" content="width=device-width initial-scale=1 maximum-scale=1 user-scalable=0" />
+
+    <meta property="og:type" content="Game" />
+    <meta property="og:title" content="Simon (HTML)" />
+    <meta property="og:url" content="http://evyatar.amitay.me/playground/simon/" />
+    <meta property="og:image" content="http://evyatar.amitay.me/playground/simon/share.jpg"/>
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet" type="text/css">
+
+    <link rel="Stylesheet" type="text/css" href="style/style.css" />
+  </head>
+  <body>
+    <div id="container"></div>
+    <b id="level"><span>0</span></b>
+
+    <div id="controls">
+      <label for="difficulty">
+        <span>Difficulty:</span>
+        <input type="range" id="difficulty" value="4" name="difficulty" min="3" max="8" step="1" />
+      </label>
+      <label for="volume">
+        <span>Volume:</span>
+        <input type="range" id="volume" value="0.25" name="volume" min="0" max="1" step="0.05" />
+      </label>
+      <span id="range-value"></span>
+    </div>
+
+    <button id="start">New Game</button>
+
+    <div id="high-score">High Score: <b>0</b></div>
+
+    <script src="script/Simon.js"></script>
+    <script src="script/app.js"></script>
+    <script>
+      app.init();
+    </script>
+
+    <script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+        try {
+            var pageTracker = _gat._getTracker("UA-9877348-1");
+            pageTracker._trackPageview();
+        } catch(err) {}
+    </script>
+  </body>
+</html>
